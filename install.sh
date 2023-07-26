@@ -35,15 +35,16 @@ rc-update add networkmanager
 #start display manager
 rc-update add lightdm
 
-#start freq scaline
-rc-service cpufreqd start
-rc-update add cpufreqd
 
 mkdir -p /usr/share/xsessions/
 cp qtile.desktop /usr/share/xsessions/
 cp NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 cp 50-org.freedesktop.NetworkManager.rules /etc/polkit-1/rules.d/50-org.freedesktop.NetworkManager.rules
+cp auto-cpufreq /etc/init.d/auto-cpufreq
+cp rfkill /etc/init.d/rfkill
 
+rc-update add rfkill
+rc-update add auto-cpufreq 
 
 
 

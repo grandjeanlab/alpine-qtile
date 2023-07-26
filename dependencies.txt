@@ -33,10 +33,10 @@ networkmanager-openvpn
 network-manager-applet
 
 # audio
-pulseaudio 
-pulseaudio-alsa
-pulseaudio-ctl
-pulseaudio-jack
+pipewire 
+pipewire-alsa
+pipewire-jack
+wireplumber
 alsa-plugins-pulse
 pavucontrol
 
@@ -45,6 +45,7 @@ terminus-font
 font-awesome
 
 # utilities
+btop
 htop
 neofetch
 neovim
@@ -54,14 +55,13 @@ curl
 light
 feh
 dunst
-zzz
 thunar
 playerctl
 tigervnc
 libreoffice
 gimp
 inkscape
-vlc-qt
+vlc
 flatpak
 mupdf 
 okular
@@ -70,9 +70,8 @@ cpufreqd
 i3lock
 xfce4-power-manager
 apptainer
-transmission-qt
+transmission-gtk
 setxkbmap
-fortune
 
 # screenshot utilities
 gnome-screenshot
@@ -87,3 +86,6 @@ lightdm-gtk-greeter
 
 # eduvpn
 py3-pip py3-dbus py3-gobject3
+
+#auto-cpufreq
+dmidecode py3-venv python3-dev py3-setuptools py3-psutil py3-distro py3-click

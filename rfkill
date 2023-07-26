@@ -1,0 +1,12 @@
+#!/sbin/openrc-run
+
+name=$RC_SVCNAME
+description="stops bluethooth"
+supervisor="supervise-daemon"
+command="/usr/sbin/rfkill"
+command_args="block bluetooth"
+command_user="root"
+
+depend() {
+	after net
+}
